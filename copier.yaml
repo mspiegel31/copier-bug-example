@@ -37,4 +37,4 @@ use_olives:
 use_anchovies:
   type: bool
   help: Do you want anchovies?
-  default: false
+  default: true
