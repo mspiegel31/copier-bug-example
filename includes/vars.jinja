@@ -1,0 +1,7 @@
+{% set pizza_toppings = [
+  {'topping': 'pepperoni',                'active': use_pepperoni},
+  {'topping': 'pineapple',                'active': use_pineapple},
+  {'topping': 'olives',                   'active': use_olives},
+  {'topping': 'anchovies',                'active': use_anchovies},
+  ] | selectattr('active') | map(attribute='topping') | list | sort
+%}

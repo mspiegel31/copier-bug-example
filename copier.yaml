@@ -1,0 +1,40 @@
+## Copier Configuration
+# https://copier.readthedocs.io/en/stable/configuring/
+_subdirectory: skeleton
+
+# Questions
+# For a complete list of prompt options, see https://copier.readthedocs.io/en/stable/configuring/#advanced-prompt-formatting
+project_name:
+  type: str
+  default: new_project
+  help: What is the name of your project?
+  validator: >- 
+    {% if not project_name | regex_search('^[a-z0-9_-]+$')%} 
+    name must be lowercase, alphanumeric, and may contain dashes and underscores
+    {%endif%}
+
+description:
+  type: str
+  multiline: true
+  default: This project does some useful things!
+
+# multi-select options
+use_pepperoni:
+  type: bool
+  help: Do you want pepperoni?
+  default: false
+
+use_pineapple:
+  type: bool
+  help: Do you want pineapple?
+  default: false
+
+use_olives:
+  type: bool
+  help: Do you want olives?
+  default: false
+  
+use_anchovies:
+  type: bool
+  help: Do you want anchovies?
+  default: false

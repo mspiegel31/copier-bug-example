@@ -1,0 +1,11 @@
+{%import pathjoin('includes', 'vars.jinja') as vars with context %}
+pizza:
+{%- if vars.pizza_toppings | length == 0 %}
+  toppings: []
+  {%- else %}
+  toppings:
+    {%- for topping in vars.pizza_toppings%}
+    - {{topping}}
+    {%-endfor%}
+  {%-endif%}
+

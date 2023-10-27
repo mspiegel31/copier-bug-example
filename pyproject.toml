@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "new_template"
+# This is a list of authors and should contain at least one author. Authors must be in the form name <email>.
+authors = []
+description = ""
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+copier = "^8.3.0"
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
