@@ -32,7 +32,7 @@ use_pineapple:
 use_olives:
   type: bool
   help: Do you want olives?
-  default: false
+  default: true
   
 use_anchovies:
   type: bool
